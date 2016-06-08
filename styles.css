@@ -10,15 +10,6 @@ body {
 	cursor: url(pencil.png) 0 25, pointer;
 }
 
-/* Draw tool */
-.draw {
-	height: 5px; 
-	width: 5px; 
-	border-radius: 100%;
-	background: black; 
-	position: absolute;
-}
-
 /* Draw canvas */
 #canvasDiv {
 	position: absolute;
@@ -27,7 +18,16 @@ body {
 	z-index: -10;
 }
 
-/* Toolbar */
+/* Basic draw tool */
+.draw {
+	height: 5px; 
+	width: 5px; 
+	border-radius: 100%;
+	background: black; 
+	position: absolute;
+}
+
+/* Toolbar - General */
 #toolbar {
 	width: 150px;
 	height: 100%;
@@ -52,26 +52,14 @@ body {
 .options {
 	margin-bottom: 20px;
 }
-#clear {
-	background: #8DA3B1;
-	color: #fff;
-	font-family: 'Sue Ellen Francisco', cursive;
-	font-size: 40px;
-	line-height: 60px;
-	border: none;
-	border-radius: 10px;
-	padding: 10px 10px 5px 10px;
-	width: 138px;
-}
-#clear:hover {
-	cursor: pointer;
-	background: #748A98;
-}
-
-/* General stylings for shape boxes */
 .shape-palette:hover, .size-palette:hover, .color-palette:hover {
 	cursor: pointer;
 }
+.options .selected {
+	border: 2px solid white;
+}
+
+/* Toolbar - Shape */
 .shape-palette {
 	width: 20px;
 	height: 20px;
@@ -85,6 +73,8 @@ body {
 .square {
 	border-radius: 0%;
 }
+
+/* Toolbar - Size */
 .size-palette {
 	width: 20px !important; 
 	height: 20px !important;
@@ -106,8 +96,7 @@ body {
 	width: 15px; 
 }
 
-
-/* General stylings for color pallete boxes */
+/* Toolbar - Color */
 .color-palette {
 	width: 20px;
 	height: 20px;
@@ -116,11 +105,26 @@ body {
 	margin-right: 8px;
 	margin-bottom: 8px;
 }
-.selected {
-	border: 2px solid white;
+
+/* Toolbar - Buttons */
+.btn {
+	background: #8DA3B1;
+	color: #fff;
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size: 40px;
+	line-height: 60px;
+	border: none;
+	border-radius: 10px;
+	width: 138px;
+	padding: 10px 10px 5px 10px;
+	margin-bottom: 10px;
+}
+.btn:hover {
+	cursor: pointer;
+	background: #748A98;
 }
 
-/* Color palletes */
+/* Color pallete */
 #black {
 	background: black;
 }

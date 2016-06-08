@@ -1,8 +1,9 @@
 (function(){
  
+ 	// Initialize settings variables
  	var drawShape, drawSize, drawColor;
 
-	// Define draw
+	// Define draw tool
 	function draw() {
 		var drawTool = document.createElement("div");
 		drawTool.className = "draw";
@@ -127,9 +128,13 @@
 		drawColor = "violet";
 	});	
 
+	// Erase the previous drawing
+	$("#stepBack").click(function() {
+		$(".draw").last().remove();
+	});
+
 	// Clear the canvas
 	$("#clear").click(function() {
-		console.log("yo");
 		$("#canvasDiv").children().remove();
 	});
 
