@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="shortcut icon" href="pencil.png" /> 
+	<title>DrawJS</title>
+</head>
+<body>
+	
+	<!-- Canvas -->
+	<div id="canvasDiv"></div>
+
+	<!-- Toolbar -->
+	<div id="toolbar">
+		<h2>DrawJS</h2>
+		<div class="options shape-options">
+			<h4>Shape</h4>
+			<div class="shape-palette circle selected" id="circle"></div>
+			<div class="shape-palette square" id="square"></div>
+		</div>
+		<div class="options size-options">
+			<h4>Size</h4>
+			<div class="size-palette small selected" id="small">S</div>
+			<div class="size-palette medium" id="medium">M</div>
+			<div class="size-palette large" id="large">L</div>
+		</div>
+		<div class="options color-options">
+			<h4>Color</h4>
+			<div class="color-palette selected" id="black"></div>
+			<div class="color-palette" id="red"></div>
+			<div class="color-palette" id="orange"></div>
+			<div class="color-palette" id="yellow"></div>
+			<div class="color-palette" id="green"></div>
+			<div class="color-palette" id="blue"></div>
+			<div class="color-palette" id="indigo"></div>
+			<div class="color-palette" id="violet"></div>
+		</div>
+		<button id="clear">CLEAR</button>
+	</div>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="draw.js"></script>
+</body>
+</html>

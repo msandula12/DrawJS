@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco);
+
+/* General stylings */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Verdana;
+	cursor: url(pencil.png) 0 25, pointer;
+}
+
+/* Draw tool */
+.draw {
+	height: 5px; 
+	width: 5px; 
+	border-radius: 100%;
+	background: black; 
+	position: absolute;
+}
+
+/* Draw canvas */
+#canvasDiv {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: -10;
+}
+
+/* Toolbar */
+#toolbar {
+	width: 150px;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	border-left: 3px solid black;
+	padding: 20px;
+	background: #c0d6e4;
+	z-index: 100;
+}
+#toolbar h2 {
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size: 70px;
+	line-height: 100px;
+	border-bottom: 2px solid black;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+#toolbar h4 {
+	margin-bottom: 10px;
+}
+.options {
+	margin-bottom: 20px;
+}
+#clear {
+	background: #8DA3B1;
+	color: #fff;
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size: 40px;
+	line-height: 60px;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 10px 5px 10px;
+	width: 138px;
+}
+#clear:hover {
+	cursor: pointer;
+	background: #748A98;
+}
+
+/* General stylings for shape boxes */
+.shape-palette:hover, .size-palette:hover, .color-palette:hover {
+	cursor: pointer;
+}
+.shape-palette {
+	width: 20px;
+	height: 20px;
+	border: 2px solid #c0d6e4;
+	display: inline-block;
+	background: black;
+}
+.circle {
+	border-radius: 100%;
+}
+.square {
+	border-radius: 0%;
+}
+.size-palette {
+	width: 20px !important; 
+	height: 20px !important;
+	border: 2px solid #c0d6e4;
+	display: inline-block;
+	text-align: center;
+	background: #c0d6e4;
+}
+.small {
+	height: 5px; 
+	width: 5px; 
+}
+.medium {
+	height: 10px; 
+	width: 10px; 
+}
+.large {
+	height: 15px; 
+	width: 15px; 
+}
+
+
+/* General stylings for color pallete boxes */
+.color-palette {
+	width: 20px;
+	height: 20px;
+	border: 2px solid black;
+	display: inline-block;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+.selected {
+	border: 2px solid white;
+}
+
+/* Color palletes */
+#black {
+	background: black;
+}
+#red {
+	background: red;
+}
+#orange {
+	background: orange;
+}
+#yellow {
+	background: yellow;
+}
+#green {
+	background: green;
+}
+#blue {
+	background: blue;
+}
+#indigo {
+	background: indigo;
+}
+#violet {
+	background: violet;
+}
