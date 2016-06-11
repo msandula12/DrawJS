@@ -158,3 +158,15 @@ body {
 #violet, .violet {
 	background: violet;
 }
+#gray, .gray {
+	background: #bbb;
+}
+#brown, .brown {
+	background: #8b4513;
+}
+#navy, .navy {
+	background: #00008b;
+}
+#white, .white {
+	background: #fff;
+}

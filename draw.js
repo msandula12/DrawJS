@@ -48,14 +48,14 @@
 	// Draw while mouse is held down
 	$("#canvasDiv").mousedown(function() {
 		drawDiv();
-	    $(this).mousemove(function() {
-	        drawLine();
-	    });
+		$(this).mousemove(function() {
+			drawLine();
+		});
 	}).mouseup(function() {
 	    $(this).unbind('mousemove');
-	    enableButton("#clear");
+		enableButton("#clear");
 		enableButton("#stepBack");
-	    randomId++;
+		randomId++;
 	});
 
 	// Change shape tool to circle
@@ -147,6 +147,34 @@
 		$(".color-palette").removeClass( "selected" );
 		$(this).addClass( "selected" );
 		drawColor = "violet";
+	});
+
+	// Change draw tool to gray
+	$("#gray").click(function() {
+		$(".color-palette").removeClass( "selected" );
+		$(this).addClass( "selected" );
+		drawColor = "gray";
+	});
+
+	// Change draw tool to brown
+	$("#brown").click(function() {
+		$(".color-palette").removeClass( "selected" );
+		$(this).addClass( "selected" );
+		drawColor = "brown";
+	});
+
+	// Change draw tool to navy
+	$("#navy").click(function() {
+		$(".color-palette").removeClass( "selected" );
+		$(this).addClass( "selected" );
+		drawColor = "navy";
+	});
+
+	// Change draw tool to white
+	$("#white").click(function() {
+		$(".color-palette").removeClass( "selected" );
+		$(this).addClass( "selected" );
+		drawColor = "white";
 	});
 
 	// Erase the most recent line drawn
