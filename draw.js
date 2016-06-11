@@ -25,6 +25,26 @@
 		$("#canvasDiv").children().last().append(drawLine);
 	}
 
+	// Function to enable buttons
+	function enableButton(buttonId){
+		if ($("#canvasDiv").has("div").length > 0) {
+			$(buttonId).prop("disabled", false);
+			$(buttonId).removeClass("disabled");
+		}
+	}	
+
+	// Function to disable buttons
+	function disableButton(buttonId){
+		if ($("#canvasDiv").has("div").length === 0) {
+			$(buttonId).prop("disabled", true);
+			$(buttonId).addClass("disabled");
+		}
+	}	
+
+	// Back-1, Clear buttons are disabled on load
+	disableButton("#clear");
+	disableButton("#stepBack");
+
 	// Draw while mouse is held down
 	$("#canvasDiv").mousedown(function() {
 		drawDiv();
@@ -33,6 +53,8 @@
 	    });
 	}).mouseup(function() {
 	    $(this).unbind('mousemove');
+	    enableButton("#clear");
+		enableButton("#stepBack");
 	    randomId++;
 	});
 
@@ -125,16 +147,21 @@
 		$(".color-palette").removeClass( "selected" );
 		$(this).addClass( "selected" );
 		drawColor = "violet";
-	});	
+	});
 
 	// Erase the most recent line drawn
 	$("#stepBack").click(function() {
 		$("#canvasDiv").children().last().remove();
+		disableButton("#clear");
+		disableButton("#stepBack");
 	});
+
 
 	// Clear the canvas
 	$("#clear").click(function() {
 		$("#canvasDiv").children().remove();
+		disableButton("#clear");
+		disableButton("#stepBack");
 	});
 
 })();

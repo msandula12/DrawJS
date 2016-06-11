@@ -111,17 +111,26 @@ body {
 	background: #8DA3B1;
 	color: #fff;
 	font-family: 'Sue Ellen Francisco', cursive;
-	font-size: 40px;
-	line-height: 60px;
+	font-size: 30px;
+	line-height: 30px;
 	border: none;
 	border-radius: 10px;
-	width: 138px;
 	padding: 10px 10px 5px 10px;
 	margin-bottom: 10px;
 }
 .btn:hover {
 	cursor: pointer;
 	background: #748A98;
+}
+#stepBack {
+	width: 50px;
+}
+#clear {
+	width: 80px;
+}
+.disabled, .disabled:hover {
+	background: #5A707E;
+	color: #aaa;
 }
 
 /* Color pallete */
