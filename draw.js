@@ -1,41 +1,40 @@
 (function(){
  
- 	// Initialize settings variables
- 	var drawShape, drawSize, drawColor;
+ 	// Initialize settings
+ 	var drawShape = "small";
+ 	var drawSize  = "circle";
+ 	var drawColor = "black";
+ 	var randomId  = 1;
 
-	// Define draw tool
-	function draw() {
-		var drawTool = document.createElement("div");
-		drawTool.className = "draw";
-		$(drawTool).addClass(drawShape);
-		$(drawTool).addClass(drawSize);
-		drawTool.id = drawColor;
-		drawTool.style.left = (event.pageX - 4) + "px"; 
-		drawTool.style.top = (event.pageY - 4) + "px";
-		document.getElementById("canvasDiv").appendChild(drawTool);
+	// Create containing element for each line
+	function drawDiv() {
+		var drawDiv = document.createElement("div");
+		drawDiv.id = "drawDiv" + randomId;
+		$("#canvasDiv").append(drawDiv);
 	}
 
-	// Define mouse movements
-	document.onmousemove = mouseMove;
-	document.onmousedown = mouseDown;
-	document.onmouseup   = mouseUp;
+	// Draw line
+	function drawLine() {
+		var drawLine = document.createElement("div");
+		drawLine.className = "draw";
+		$(drawLine).addClass(drawShape);
+		$(drawLine).addClass(drawSize);
+		$(drawLine).addClass(drawColor);
+		drawLine.style.left = (event.pageX - 4) + "px"; 
+		drawLine.style.top  = (event.pageY - 4) + "px";
+		$("#canvasDiv").children().last().append(drawLine);
+	}
 
-	var mouseState = "up";
-
-	// When mouse move
-	function mouseMove(event) {
-	    if (mouseState == "down") {
-	        draw();
-	    }
-	}
-	// When mouse down
-	function mouseDown(event) {
-	    mouseState = "down";
-	}
-	// When mouse up
-	function mouseUp(event) {
-	    mouseState = "up";
-	}
+	// Draw while mouse is held down
+	$("#canvasDiv").mousedown(function() {
+		drawDiv();
+	    $(this).mousemove(function() {
+	        drawLine();
+	    });
+	}).mouseup(function() {
+	    $(this).unbind('mousemove');
+	    randomId++;
+	});
 
 	// Change shape tool to circle
 	$("#circle").click(function() {
@@ -128,9 +127,9 @@
 		drawColor = "violet";
 	});	
 
-	// Erase the previous drawing
+	// Erase the most recent line drawn
 	$("#stepBack").click(function() {
-		$(".draw").last().remove();
+		$("#canvasDiv").children().last().remove();
 	});
 
 	// Clear the canvas

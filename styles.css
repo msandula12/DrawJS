@@ -125,27 +125,27 @@ body {
 }
 
 /* Color pallete */
-#black {
+#black, .black {
 	background: black;
 }
-#red {
+#red, .red {
 	background: red;
 }
-#orange {
+#orange, .orange {
 	background: orange;
 }
-#yellow {
+#yellow, .yellow {
 	background: yellow;
 }
-#green {
+#green, .green {
 	background: green;
 }
-#blue {
+#blue, .blue {
 	background: blue;
 }
-#indigo {
+#indigo, .indigo {
 	background: indigo;
 }
-#violet {
+#violet, .violet {
 	background: violet;
 }
