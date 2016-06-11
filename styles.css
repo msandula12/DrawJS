@@ -108,7 +108,7 @@ body {
 
 /* Toolbar - Buttons */
 .btn {
-	background: #8DA3B1;
+	background: #8da3b1;
 	color: #fff;
 	font-family: 'Sue Ellen Francisco', cursive;
 	font-size: 30px;
@@ -129,34 +129,34 @@ body {
 	width: 80px;
 }
 .disabled, .disabled:hover {
-	background: #5A707E;
+	background: #5a707e;
 	color: #aaa;
 }
 
 /* Color pallete */
 #black, .black {
-	background: black;
+	background: #000;
 }
 #red, .red {
-	background: red;
+	background: #ff0000;
 }
 #orange, .orange {
-	background: orange;
+	background: #ff8c00;
 }
 #yellow, .yellow {
-	background: yellow;
+	background: #ffff00;
 }
 #green, .green {
-	background: green;
+	background: #006400;
 }
 #blue, .blue {
-	background: blue;
+	background: #0000cd;
 }
-#indigo, .indigo {
-	background: indigo;
+#pink, .pink {
+	background: #ff00ff;
 }
 #violet, .violet {
-	background: violet;
+	background: #9400d3;
 }
 #gray, .gray {
 	background: #bbb;
@@ -164,8 +164,8 @@ body {
 #brown, .brown {
 	background: #8b4513;
 }
-#navy, .navy {
-	background: #00008b;
+#turqoise, .turqoise {
+	background: #40e0d0;
 }
 #white, .white {
 	background: #fff;

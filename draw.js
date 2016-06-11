@@ -135,11 +135,11 @@
 		drawColor = "blue";
 	});
 
-	// Change draw tool to indigo
-	$("#indigo").click(function() {
+	// Change draw tool to pink
+	$("#pink").click(function() {
 		$(".color-palette").removeClass( "selected" );
 		$(this).addClass( "selected" );
-		drawColor = "indigo";
+		drawColor = "pink";
 	});
 
 	// Change draw tool to violet
@@ -163,11 +163,11 @@
 		drawColor = "brown";
 	});
 
-	// Change draw tool to navy
-	$("#navy").click(function() {
+	// Change draw tool to turqoise
+	$("#turqoise").click(function() {
 		$(".color-palette").removeClass( "selected" );
 		$(this).addClass( "selected" );
-		drawColor = "navy";
+		drawColor = "turqoise";
 	});
 
 	// Change draw tool to white
