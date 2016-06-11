@@ -39,7 +39,7 @@
 			$(buttonId).prop("disabled", true);
 			$(buttonId).addClass("disabled");
 		}
-	}	
+	}
 
 	// Back-1, Clear buttons are disabled on load
 	disableButton("#clear");
@@ -48,6 +48,7 @@
 	// Draw while mouse is held down
 	$("#canvasDiv").mousedown(function() {
 		drawDiv();
+		drawLine();
 		$(this).mousemove(function() {
 			drawLine();
 		});

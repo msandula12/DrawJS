@@ -128,6 +128,9 @@ body {
 #clear {
 	width: 80px;
 }
+#saveDrawing {
+	width: 138px;
+}
 .disabled, .disabled:hover {
 	background: #5a707e;
 	color: #aaa;
